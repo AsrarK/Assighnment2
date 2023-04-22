@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg ">
+  <div class="container d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+    <a class="navbar-brand" href="#">
+      <img src="/images/BE logo.png" width="50" height="50">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav col-12 col-lg-auto my-2 justify-content-center ml-auto">
+        <% if(title=="Home"){%>
+          <li class="nav-item active">
+        <%}else{%>
+          <li class="nav-item">
+        <%}%>
+            <a class="nav-link active" aria-current="page" href="/home"><i class="fas fa-home"></i> Home </a>
+          </li>
+        <% if(title=="About"){%>
+        <li class="nav-item active">
+          <%}else{%>
+            <li class="nav-item">
+              <%}%> 
+          <a class="nav-link active" aria-current="page" href="/about"><i class="fas fa-address-card"></i> About Me </a>
+        </li>
+
+        <% if(title=="Projects"){%>
+        <li class="nav-item active">
+          <%}else{%>
+            <li class="nav-item">
+              <%}%> 
+               
+          <a class="nav-link active" aria-current="page" href="/projects"><i class="fas fa-terminal"></i> Projects </a>
+        </li>
+
+        <% if(title=="Services"){%>
+        <li class="nav-item active">
+          <%}else{%>
+            <li class="nav-item">
+              <%}%> 
+          <a class="nav-link active" aria-current="page" href="/services"><i class="fas fa-concierge-bell"></i> Services </a>
+        </li>
+
+         <% if(title=="Contact"){%>
+        <li class="nav-item active">
+          <%}else{%>
+            <li class="nav-item">
+              <%}%> 
+          <a class="nav-link active" aria-current="page" href="/contact"><i class="fas fa-address-book"></i> Contacts </a>
+        </li>
+        <%if(typeof displayName =='string' && displayName){%>
+          <li class="navbar-text"><i class="fas fa-lg fa-user"></i>Welcome, <%=displayName%></li>
+          <li class="nav-item"><a href="/logout" class="nav-link"><i class="fas fa-lg fa-sign-out-alt"></i>logout</a></li>
+        <%}else{%>
+          <li class ="nav-item"><a href="/login" class="nav-link"><i class="fas fa-lg fa-sign-in-alt"></i>Login</a></li>
+        <%}%>
+    </div>
+  </div>
+</nav>

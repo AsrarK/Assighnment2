@@ -1,0 +1,21 @@
+<%-include ('./partials/header.ejs');%>
+<%-include ('./partials/main_nav.ejs');%>
+<!--Main nav Navigation-->
+  <% if(title=="Home"){%>
+    <%-include ('./partials/home.ejs');%>
+  <%} else if(title=="Projects"){%>
+    <%-include ('./partials/projects.ejs');%>
+  <%} else if(title=="Services"){%>
+    <%-include ('./partials/services.ejs');%>
+  <%} else{%>
+    <main class="container my-5 bg-light">
+      <div class="bg-light p-5 rounded">
+        <div class="col-sm-8 py-5 mx-auto">
+          <h1 class="display-4">Welcome to the <%=title%> Page </h1>
+        </div>
+      </div>
+    </main>
+  <%}%>
+<!--Script section-->
+<%-include ('./partials/bottom_nav.ejs');%>
+<%-include ('./partials/footer.ejs');%>
